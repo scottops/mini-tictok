@@ -1,0 +1,32 @@
+<navigation-bar></navigation-bar>
+
+<view style="height:{{sh+8}}px; width:100%;background:rgb(27, 9, 9)">
+  <swiper style="height: 100%;" vertical duration="200" bindchange="slide">
+    <block wx:for="{{videos}}" wx:key="id" wx:if="{{videos!=[]}}">
+      <swiper-item style="width: 100%;height: 100%;position: relative;">
+        <video wx:if="{{index==changeIndex}}" style="height:100%; width:100%" src="{{item.video}}" autoplay="true" controls="false" />
+        <cover-view class="cover_pane">
+          <cover-view class="user">
+            <cover-image src="/images/user.jpg"></cover-image>
+          </cover-view>
+          <cover-view class="it">
+            <cover-image src="/images/xx1.png"></cover-image>
+            <cover-view>11</cover-view>
+          </cover-view>
+          <cover-view class="it">
+            <cover-image src="/images/pl.png"></cover-image>
+            <cover-view>11</cover-view>
+          </cover-view>
+          <cover-view class="it">
+            <cover-image src="/images/sc1.png"></cover-image>
+            <cover-view>11</cover-view>
+          </cover-view>
+          <cover-view class="it">
+            <cover-image src="/images/zf1.png"></cover-image>
+            <cover-view>11</cover-view>
+          </cover-view>
+        </cover-view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
